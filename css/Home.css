@@ -1,0 +1,1155 @@
+img {
+	pointer-events: none !important;
+}
+
+
+.event-container,
+.channel-container {
+	position: relative;
+	overflow: hidden;
+}
+
+/*.event-container:before , .channel-container:before {
+            content: '';
+            width: 100%;
+            height: 200%;
+            position: absolute;
+            top: 0; left: 0;
+            opacity: 0.15;
+            filter: blur;
+            background: linear-gradient(to left, transparent 0%, #099 40%, #fff 60%, transparent 100%);
+            transform: translate(-100%, -25%) rotate(30deg);
+            animation: blick 7s infinite;
+        }*/
+
+@keyframes blick {
+	0% {
+		transform: translate(-100%, -25%) rotate(10deg);
+	}
+
+	20% {
+		transform: translate(100%, -25%) rotate(10deg);
+	}
+
+	100% {
+		transform: translate(100%, -25%) rotate(10deg);
+	}
+}
+
+
+.toggle-btn {
+	font-size: 20px;
+	font-weight: bold;
+	margin-right: 10px;
+	transition: transform 0.5s;
+}
+
+
+.toggle-btn:hover {
+	transform: rotate(90deg);
+}
+
+.mylaga {
+	animation: fadeIn 0.5s;
+}
+
+
+@keyframes fadeInButton {
+	from {
+		opacity: 0;
+		/* Memulai dari transparan */
+		transform: translateY(-3px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		/* Memulai dari transparan */
+		transform: translateX(50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeIn2 {
+	from {
+		opacity: 0;
+		/* Memulai dari transparan */
+		transform: translateX(-50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.mylaga[style*="display: none"] {
+	animation: none;
+}
+
+
+.list-laga1 {
+	display: none;
+}
+
+
+.list-laga {
+	font-family: 'Teko', sans-serif;
+	width: 90%;
+	margin-top: 3px;
+	font-size: 0.9em;
+	font-weight: 700;
+	padding: 4px !important;
+	text-align: left;
+	color: #fff;
+	background-color: #099;
+	cursor: pointer;
+	border: .5px solid #999;
+	border-bottom-left-radius: 1px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 1px;
+	box-shadow: 0 4px 4px -2px #000;
+	transition: all 0.3s ease;
+}
+
+.list-laga:hover {
+	background-color: #009999b3;
+	cursor: pointer;
+	transform: scale(1.01);
+	border: .5px solid #fff;
+}
+
+
+@keyframes rainbowBorder {
+	0% {
+		border-image-source: linear-gradient(90deg, #810404ff, #810404ff, #810404ff, #cbcbcbff, #cbcbcbff, #cbcbcbff);
+	}
+
+	25% {
+		border-image-source: linear-gradient(180deg, #810404ff, #810404ff, #810404ff, #cbcbcbff, #cbcbcbff, #cbcbcbff);
+	}
+
+	50% {
+		border-image-source: linear-gradient(270deg, #810404ff, #810404ff, #810404ff, #cbcbcbff, #cbcbcbff, #cbcbcbff);
+	}
+
+	75% {
+		border-image-source: linear-gradient(360deg, #810404ff, #810404ff, #810404ff, #cbcbcbff, #cbcbcbff, #cbcbcbff);
+	}
+
+	100% {
+		border-image-source: linear-gradient(90deg, #810404ff, #810404ff, #810404ff, #cbcbcbff, #cbcbcbff, #cbcbcbff);
+	}
+}
+
+
+.live-label {
+	display: none;
+	background-color: ;
+	font-size: 0.9em;
+	font-weight: 700;
+	padding: 2px !important;
+	text-align: center !important;
+	/*background-color: #393a3f;*/
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	text-transform: uppercase;
+	position: relative;
+	color: rgb(32, 178, 170);
+	font-weight: bolder;
+}
+
+
+.center .live-label b {
+	display: flex;
+	padding: 3px;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: center;
+}
+
+.center .live-label i {
+	font-size: 16px;
+	margin-right: -3px;
+	color: red;
+	animation: bounce 1s infinite;
+}
+
+.center .live-label b {
+	/* animation: textGlow 1s infinite alternate;*/
+}
+
+
+/*icon gerak*/
+@keyframes bounce {
+
+	0%,
+	100% {
+		transform: translateX(2px);
+	}
+
+	50% {
+		transform: translateX(-2px);
+	}
+}
+
+
+@keyframes textGlow {
+	0% {
+		text-shadow: 0 0 5px rgba(255, 0, 0, 0.1);
+	}
+
+	100% {
+		color: rgb(32, 178, 170);
+		/* text-shadow: 0 0 5px red; */
+	}
+}
+
+.kotak {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	color: #fff;
+	padding: -5px;
+	margin-bottom: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left,
+.center,
+.right {
+	flex: 1;
+	text-align: center;
+}
+
+.kotak.left img,
+.slogo {
+	border-radius: 7px;
+	width: 38px !important;
+	height: 40px !important;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	max-width: 50px !important;
+	max-height: 40px !important;
+}
+
+.kotak.right img,
+.slogo {
+	border-radius: 7px;
+	width: 38px !important;
+	height: 40px !important;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	max-width: 50px !important;
+	max-height: 50px !important;
+}
+
+/*.slogo {
+  background-image: url('https://www.gstatic.com/onebox/sports/logos/crest_48dp.png');
+}*/
+
+
+.notemq,
+#link1 {
+	display:  !important;
+}
+
+div.date-outer,
+div.post.hentry.uncustomized-post-template {
+	padding: 0px !important;
+	margin: 0px !important;
+}
+
+h3.post-title.entry-title {
+	display: none !important;
+}
+
+
+/* Clappr Style */
+div.clappr-watermark[data-watermark] {
+	width: 170px;
+}
+
+.spinner-three-bounce[data-spinner]>div {
+	background-color: rgb(32, 178, 170) !important;
+	border: 1px solid rgba(255, 255, 255, .7) !important;
+}
+
+svg.poster-icon {
+	padding: 10px !important;
+	fill: rgb(32, 178, 170, .0) !important;
+	border-radius: 10px !important;
+}
+
+.dvr-controls[data-dvr-controls] {
+	color: #fff !important;
+}
+
+.media-control.live[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar] .bar-fill-2[data-seekbar] {
+	background-color: rgb(32, 178, 170) !important;
+}
+
+
+.media-control[data-media-control] {
+	padding: 0.5px !important;
+}
+
+.media-control[data-media-control] .media-control-layer[data-controls] button.media-control-button {
+	background-color: rgb(32, 178, 170) !important;
+	border: 0.5px solid rgba(255, 255, 255, .7) !important;
+	border-radius: 10px;
+}
+
+.media-control[data-media-control] .media-control-icon {
+	background-color: rgb(32, 178, 170) !important;
+	border: 0.5px solid rgba(255, 255, 255, .7) !important;
+	border-radius: 10px;
+}
+
+.media-control[data-media-control] .media-control-layer[data-controls] .drawer-container[data-volume] .bar-container[data-volume] {
+	margin-left: 5px;
+}
+
+svg.poster-icon {
+	width: 70px !important;
+}
+
+
+/* Custom CSS for Video Player and Sidebar Layout */
+html,
+body {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	color: white;
+	font-family: 'Teko', sans-serif;
+	/* Menggunakan font Teko dari Google Fonts */
+}
+
+.popup {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	justify-content: center;
+	align-items: center;
+	z-index: 19999;
+}
+
+.popup-content {
+	background-color: #242424;
+	padding: 20px;
+	border-radius: 10px;
+	width: 300px;
+	text-align: center;
+	position: relative;
+}
+
+.popup-content h3 {
+	margin-bottom: 20px;
+	margin-top: 0;
+	color: #ffce00;
+	border-bottom: 1.5px solid #fff;
+}
+
+.close-btn {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: red;
+	color: white;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.popup-buttons {
+	margin-top: 20px;
+}
+
+.popup-buttons button {
+	margin: 5px;
+	padding: 10px;
+	background-color: #099;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.popup-buttons button:hover {
+	background-color: rgba(32, 178, 170, .7);
+}
+
+.lang-toggle {
+	margin-top: 10px;
+	text-decoration: underline;
+	cursor: pointer;
+	color: #099;
+}
+
+#main-content {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+.video-container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	background-color: #000;
+	/* Warna latar belakang yang lebih gelap */
+	height: 100%;
+	/* Pastikan video-container mengisi seluruh tinggi */
+	padding: 0 10px 10px;
+	/* Hanya padding horizontal dan bawah */
+	border-radius: 0 0 10px 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	/* Tambahkan bayangan untuk kedalaman */
+	justify-content: center;
+	align-items: center;
+}
+
+/* Video wrapper */
+.video-wrapper {
+	width: 100%;
+	padding-bottom: 56.25%;
+	/* Rasio 16:9 */
+	height: 0;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	/* Bayangan untuk elemen video */
+	margin-bottom: 10px;
+	/* Jarak antar elemen */
+}
+
+.video-wrapper iframe,
+.video-wrapper img#video-placeholder {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#player {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	/* Optional: background hitam untuk player */
+	display: none;
+}
+
+.countdown-wrapper {
+	position: absolute;
+	width: 100%;
+	backdrop-filter: blur(1.6px);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 1.3em !important;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 300px;
+	border-radius: 10px;
+}
+
+.countdown-title {
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.countdown-titles {
+	display: none;
+	font-size: 0.9em;
+	letter-spacing: 3px;
+	margin-top: 10px;
+}
+
+.countdown-timer {
+	letter-spacing: 5px;
+	font-size: 2em;
+	font-weight: 600;
+	line-height: 0.1;
+	margin-top: 20px;
+}
+
+.sidebar {
+	border-left: 1.5px solid #ccc;
+	flex: 0 0 400px;
+	/* Lebar tetap untuk sidebar */
+	background-color: #242424;
+	padding: 0;
+	/* Menghilangkan padding */
+	overflow-y: auto;
+	/* Memungkinkan scroll vertikal jika diperlukan */
+	overflow-x: hidden;
+	/* Mencegah scroll horizontal */
+	height: 100vh;
+	box-sizing: border-box;
+	/* Menyertakan padding dalam perhitungan lebar */
+	display: flex;
+	flex-direction: column;
+}
+
+/* CSS untuk menu-wrapper di atas */
+.menu-wrapper-top {
+	background-color: #535354;
+	/* Warna latar yang solid */
+	padding: 0;
+	/* Padding seragam di semua sisi */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	/* Bayangan untuk kedalaman visual */
+	border-bottom: 1px solid #c7c7c7;
+	/* Garis batas untuk memperjelas pemisahan */
+	position: sticky;
+	/* Membuat menu tetap di atas saat di-scroll */
+	top: 0;
+	/* Menempel di atas */
+	z-index: 100;
+	/* Memastikan menu berada di atas isi lainnya */
+	width: 100%;
+	/* Memastikan mengisi lebar sidebar */
+}
+
+.menu-wrapper-top .menu-button i {
+	margin-right: 8px;
+	/* Jarak antara ikon dan teks */
+}
+
+/* Tombol Refresh - warna abu-abu */
+.menu-wrapper-bottom .refresh-button {
+	background-color: #18191c;
+	/* Warna abu-abu */
+}
+
+.menu-wrapper-bottom .refresh-button:hover {
+	background-color: #18191ceb;
+	/* Warna abu-abu yang lebih gelap saat hover */
+}
+
+/* Tombol Telegram - warna biru */
+.menu-wrapper-bottom .telegram-button {
+	background-color: #18191c;
+	/* Warna biru sesuai Telegram */
+}
+
+.menu-wrapper-bottom .telegram-button:hover {
+	background-color: #18191ceb;
+	/* Warna biru yang lebih gelap saat hover */
+}
+
+/* Umum untuk semua tombol di menu-wrapper-bottom */
+.menu-wrapper-bottom .menu-button {
+	flex: 1;
+	/* Pastikan tombol membagi ruang secara merata */
+	text-align: center;
+	/* Memusatkan teks dan ikon */
+	padding: 10px 0;
+	/* Padding untuk kenyamanan pengguna */
+	color: white;
+	/* Warna teks */
+	border: none;
+	/* Menghilangkan border */
+	cursor: pointer;
+	/* Menampilkan kursor pointer saat hover */
+	transition: background-color 0.3s;
+	/* Transisi halus untuk efek hover */
+	margin: 0;
+	/* Menghilangkan margin antar tombol */
+	border-left: 1px solid #535354;
+	/* Garis pemisah antar tombol */
+	font-family: 'Teko', sans-serif;
+	/* Menambahkan properti font-family */
+}
+
+.menu-wrapper-bottom .menu-button:first-child {
+	border-left: none;
+	/* Menghilangkan garis pemisah pada tombol pertama */
+}
+
+.menu-wrapper-bottom .menu-button i {
+	margin-right: 8px;
+	/* Jarak antara ikon dan teks */
+}
+
+.menu-container {
+	display: flex;
+	width: 100%;
+	/* Memastikan mengisi lebar wrapper */
+	margin: 0;
+	/* Menghilangkan margin default */
+	padding: 0;
+	/* Menghilangkan padding default */
+}
+
+.menu-button {
+	flex: 1;
+	/* Ensures each button has the same width */
+	text-align: center;
+	/* Centering the text inside the buttons */
+	padding: 8px 0;
+	/* Padding for button for better touch */
+	/*border-bottom: 2px solid #18191c !important; */
+	background-color: #18191c;
+	/* Example background color */
+	color: white;
+	/* Text color */
+	border: none;
+	/* Removes border */
+	cursor: pointer;
+	/* Shows a pointer cursor on hover */
+	transition: background-color 0.3s;
+	/* Smooth transition for hover effect */
+	margin: 0;
+	/* Menghilangkan margin antar tombol */
+	border-left: 1px solid #535354;
+	/* Garis pemisah antar tombol */
+	font-family: 'Teko', sans-serif;
+	/* Menambahkan properti font-family */
+	box-shadow: inset 0 0 0 0 #099;
+	-webkit-transition: ease-out 0.4s;
+	-moz-transition: ease-out 0.4s;
+	transition: ease-out 0.5s;
+}
+
+.menu-button:first-child {
+	border-left: none;
+	/* Menghilangkan garis pemisah pada tombol pertama */
+}
+
+.menu-button:hover {
+	box-shadow: inset 0 -4px 0 0 #099;
+}
+
+.sidebar-content {
+	flex-grow: 1;
+	/* Let content take the remaining space */
+	padding: 2px;
+	/* Padding around content for better spacing */
+	background-color: #18191c;
+	/* Slightly off-white background for content */
+	display: none;
+	/* Hide by default */
+	overflow-y: auto;
+	/* Ensures only this part is scrollable */
+}
+
+.sidebar-content.active {
+	display: block;
+	/* Show active content */
+}
+
+/*
+        .event-container {
+            position: relative;
+            background:#181818;
+            /*background-color: #1E293B;
+            padding: 0px;
+            border: 1px solid rgba(32,178,170,.7);
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease;
+            margin-bottom: 10px;
+            animation: fadeIn 0.7s; 
+            box-shadow: inset 0 0 0 0 #099;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.3s;
+        }
+        .event-container0 {
+            margin-bottom: 10px;
+  background: linear-gradient(135deg, #020304, #181a22, #1a233a, #283040);
+  border-radius: 5px;
+  border: 1px solid #fff;
+  position: relative;
+        }
+
+        .event-container:hover, .event-container.hover-effect {background: linear-gradient(135deg, #334155, #2e3236, #2a2e35, #3c3c40);border-radius:10px;box-shadow: inset 0 0 0 3px #393a3f;
+        }
+*/
+
+.event-container {
+	position: relative;
+	background: linear-gradient(30deg, #17282d, #17282d, #0a1012a7, #17282d, #17282d);
+	/*background:#17282e;*/
+	padding: 0px;
+	border: 1px solid #797979;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 15px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 2px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease;
+	margin-bottom: 10px;
+	animation: fadeIn 0.8s;
+	box-shadow: inset 0 0 0 0 #ddd;
+	-webkit-transition: ease-out 0.4s;
+	-moz-transition: ease-out 0.4s;
+	transition: ease-out 0.3s;
+}
+
+.event-container0 {
+	margin-bottom: 10px;
+	background: linear-gradient(135deg, #020304, #181a22, #1a233a, #283040);
+	border-radius: 5px;
+	border: 1px solid #fff;
+	position: relative;
+}
+
+.event-container:hover,
+.event-container.selected {
+	border: 1px solid #099;
+}
+
+.event-container:hover,
+.event-container.hover-effect {
+	background: linear-gradient(135deg, #334155, #2e3236, #2a2e35, #3c3c40);
+	border-bottom-left-radius: 1px;
+	border-bottom-right-radius: 15px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 1px;
+	box-shadow: inset 0 0 0 3px #393a3f;
+}
+
+
+.live-label {
+	display: none;
+	background-color: ;
+
+	font-size: 0.9em;
+	font-weight: 700;
+	margin-top: 3px;
+	margin-bottom: -10px;
+	padding: 2px !important;
+	text-align: center !important;
+	/*background-color: #393a3f;*/
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	position: relative;
+
+	color: red;
+	font-weight: bold;
+}
+
+/* .server-buttons {
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #0F172A;
+            border-radius: 5px;
+        }
+
+        .server-buttons .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        } */
+
+.event-container1 {
+	display: none;
+}
+
+.ch-label {
+	display: none;
+	position: absolute;
+	top: 113px;
+	right: 5px;
+	/*background-color: #20BB2E;*/
+	background-color: rgb(32, 178, 170);
+	padding: 2px 5px;
+	font-size: 0.75em;
+	color: white;
+	border-radius: 3px;
+}
+
+.server-buttons {
+	display: none;
+	flex-direction: column;
+	align-items: flex-start center;
+	padding: 6px;
+	margin: 5px;
+	margin-top: 10px;
+	background-color: #18191c;
+	border-bottom-left-radius: 1px;
+	border-bottom-right-radius: 15px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 1px;
+}
+
+.server-buttons .buttons-container {
+	display: flex;
+	padding: 3px;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: center;
+}
+
+.server-button {
+	background-color: rgb(32, 178, 170);
+	padding: 5px 7px;
+	font-size: 0.75em;
+	color: white;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	text-align: center;
+	/* flex: 1; */
+	max-width: 80px;
+	/* Lebar maksimal untuk tombol */
+}
+
+.server-button.active {
+	animation: fadeInButton 0.7s;
+	background-color: rgba(32, 178, 170, 0.5);
+	/*background-color: #1F8B24;*/
+}
+
+.instruction {
+	font-size: 0.75em;
+	color: white;
+	margin-bottom: 5px;
+	text-align: left;
+	width: 100%;
+}
+
+h2 {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	font-size: 1em;
+	font-weight: 700;
+	text-align: center;
+	background-color: #393a3f;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom: 1px solid rgba(32, 178, 170, .7);
+	margin-right: 15%;
+	margin-left: 15%;
+	position: relative;
+	display: flex;
+	padding-top: 2px !important;
+	padding: 3px !important;
+	flex-wrap: wrap;
+	gap: 5px;
+	justify-content: center;
+}
+
+.sport-icon {
+	pointer-events: none !important;
+	width: 15.8px;
+	height: 14.5px;
+	margin-right: 0px;
+	margin-left: -5px;
+	border-radius: 3px;
+}
+
+.team {
+	display: none;
+	align-items: center;
+	/* margin: 10px 0; */
+}
+
+.team-logo {
+	display: none;
+	width: 22px;
+	height: 24px;
+	/*auto;*/
+	margin-right: 10px;
+}
+
+/*
+        .match-time {
+            text-align: center;
+            font-size: 1em;
+            display: ;
+        }
+*/
+.match-time {
+	margin-top: -2px;
+	text-align: center;
+	font-size: 1.3em;
+	display: ;
+}
+
+.match-date {
+	/* margin-top: 5px; */
+	margin: 3px;
+	text-align: center;
+	font-size: 1em;
+	display: ;
+}
+
+.kickoff-match-time,
+.match-time1 {
+	margin-top: -2px;
+	text-align: center;
+	font-size: 1.3em;
+	display: ;
+}
+
+.kickoff-match-date,
+.match-date1 {
+	/* margin-top: 5px; */
+	margin: 3px;
+	text-align: center;
+	font-size: 1em;
+	display: ;
+}
+
+
+.wib {
+	text-align: center;
+	font-size: 1em;
+	display: none;
+}
+
+.tgl {
+	margin: 3px;
+	text-align: center;
+	font-size: 1em;
+	display: none;
+}
+
+.chat-iframe {
+	width: 100%;
+	height: 99%;
+	/* Make the iframe fill the entire height of the sidebar content */
+	border: none;
+	overflow: hidden;
+}
+
+.event-container .team-logo1,
+.event-container .team-logo2 {
+	width: 24px;
+	/* Ukuran logo lebih besar */
+	height: auto;
+	margin-right: 10px;
+}
+
+.event-container .team-logo2 {
+	background-color: #ffff0000;
+}
+
+.event-container .team1,
+.event-container .team2 {
+	display: flex;
+	align-items: center;
+	/* margin: 10px 0; */
+}
+
+.event-container .team2 {
+	color: #ffff0000;
+}
+
+.event-container .team2:hover {
+	color: #ffff0000;
+}
+
+@media (max-width: 768px) {
+	div.clappr-watermark[data-watermark] {
+		width: 100px;
+	}
+
+	#main-content {
+		flex-direction: column;
+		display: flex;
+		height: 100vh;
+		background-color: #242424;
+	}
+
+	.video-container {
+		/* width: 100%; */
+		position: relative;
+		padding-top: 52.30%;
+		animatio n: rainbowBorder 5s infinite linear;
+		box-shadow: 0 10px 10px -10px #242424;
+		border: 1.5px solid transparent;
+		/* Increased border width */
+		border-image: linear-gradient(90deg, #810404ff, #810404ff, #810404ff, #cbcbcbff, #cbcbcbff, #cbcbcbff) 0;
+		/*opacity*/
+		border-radius: 0 0 10px 10px;
+	}
+
+	.video-wrapper {
+		border-radius: 0 0 10px 10px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	.sidebar {
+		border-left: none !important;
+		width: 100%;
+		padding: 2px;
+		box-sizing: border-box;
+		overflow-y: auto;
+		flex-shrink: 0;
+		flex-grow: 1;
+		min-height: calc(100vh - 56.25vw);
+	}
+
+	.menu-button {
+		margin-bottom: 2px;
+	}
+
+	.chat-iframe {
+		height: 52vh;
+		/* Make the iframe fill the entire height of the sidebar content */
+		border: none;
+	}
+
+	.countdown-wrapper {
+		font-size: 16px;
+	}
+
+	#spacer {
+		height: 95px;
+		/* Sesuaikan nilai tinggi ini untuk memastikan sidebar tidak menimpa navbar */
+		width: 100%;
+		background: transparent;
+		/* Pastikan div ini tidak terlihat */
+	}
+
+	/* Tambahan untuk memastikan menu-wrapper-bottom berada di atas navbar */
+	.menu-wrapper-bottom {
+		position: fixed;
+		/* Pastikan posisi fixed agar selalu di atas navbar */
+		bottom: env(safe-area-inset-bottom);
+		/* Sesuaikan dengan safe area */
+		left: 0;
+		right: 0;
+		width: 100%;
+		z-index: 2147483647 !important;
+		/* Pastikan z-index cukup tinggi */
+		inset: auto 0px 0px auto !important;
+		padding-bottom: calc(0px + env(safe-area-inset-bottom));
+		/* Menambahkan padding bawah */
+	}
+}
+
+#video-placeholder {
+	max-width: 100%;
+	width: 100% !important;
+}
+
+
+.channel-container {
+	/*transform: scale(.98); */
+	display: flex;
+	align-items: center;
+	background: linear-gradient(30deg, #17282d, #17282d, #0a1012a7, #17282d, #17282d);
+	padding: 10px;
+	border: 1px solid #797979;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 15px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 2px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	/* Menyesuaikan dengan elemen induk */
+	box-sizing: border-box;
+	/* Memastikan padding tidak menambah lebar total */
+	/*margin-bottom: 10px;
+            animation: fadeInButton 0.7s; */
+
+
+	transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease;
+	margin-bottom: 10px;
+	animation: fadeIn2 0.8s;
+	box-shadow: inset 0 0 0 0 #ddd;
+	-webkit-transition: ease-out 0.4s;
+	-moz-transition: ease-out 0.4s;
+	transition: ease-out 0.3s;
+}
+
+.logo-container {
+	flex-shrink: 0;
+	width: 80px;
+	height: 55px;
+	border: 1px solid #797979;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 15px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 2px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	max-width: 100%;
+	max-height: 100%;
+	margin: 0px;
+}
+
+.info-container {
+	margin-left: 10px;
+}
+
+.channel-name {
+	margin: 0;
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+}
+
+.status {
+	margin: 0;
+	font-size: 16px;
+	color: #099;
+}
+
+.channel-container:hover,
+.channel-container.selected {
+	transform: scale(1);
+	border: 1px solid #099;
+	background: linear-gradient(135deg, #334155, #2e3236, #2a2e35, #3c3c40);
+	/*background: linear-gradient(135deg, #2b3842, #3b5267, #46556c, #50505b);*/
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#button-live-tv,
+.content-channel {
+	display: ;
+}
